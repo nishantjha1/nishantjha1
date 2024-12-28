@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishant Jha - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #343a40;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: url('https://ccitraining.edu/wp-content/uploads/2024/01/accounting-in-a-business.webp') no-repeat center center/cover;
+            color: #fff;
+            padding: 3rem 1rem;
+            text-align: center;
+            position: relative;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        header > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            border: 3px solid #fff;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        header h2 {
+            font-size: 1.5rem;
+        }
+
+        nav {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0 1rem;
+            color: #343a40;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #007bff;
+        }
+
+        section {
+            padding: 2rem;
+            margin: 1rem auto;
+            max-width: 900px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .services h2 {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .services button {
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: 1rem;
+            min-width: 150px;
+        }
+
+        .services button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-info {
+            display: none;
+            margin-top: 1rem;
+            padding: 0.5rem;
+            background: #f1f1f1;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #343a40;
+            color: #fff;
+        }
+    </style>
+    <script>
+        function toggleServiceInfo(id) {
+            const info = document.getElementById(id);
+            info.style.display = info.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="Nishant.jpeg" alt="Nishant Jha">
+        <h1>Nishant Jha</h1>
+        <p>"Your talent determines what you can do"</p>
+        <h2>Financial Services Provider</h2>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>Hello! I’m Nishant Jha, a passionate and experienced financial professional. With over 5 years of expertise in the financial domain, I specialize in a range of services, including taxation, accounting, compliance, and auditing. 
+
+           I am committed to empowering businesses and individuals by providing tailored financial solutions. My services encompass everything from tax planning and reconciliation to budgeting and property tax advisory, ensuring compliance with the latest regulations. Let’s work together to achieve your financial goals with clarity and confidence.</p>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Services</h2>
+        <button onclick="toggleServiceInfo('service1')">E-PAN Services</button>
+        <div id="service1" class="service-info">Offering reliable E-PAN services to ensure smooth processing.</div>
+
+        <button onclick="toggleServiceInfo('service2')">FSSAI License</button>
+        <div id="service2" class="service-info">Comprehensive FSSAI licensing services.</div>
+
+        <button onclick="toggleServiceInfo('service3')">HHJS License</button>
+        <div id="service3" class="service-info">Streamlined HHJS license assistance.</div>
+
+        <button onclick="toggleServiceInfo('service4')">MSME Registration</button>
+        <div id="service4" class="service-info">Hassle-free MSME registration for your business.</div>
+
+        <button onclick="toggleServiceInfo('service5')">GST Services</button>
+        <div id="service5" class="service-info">Expert GST return filings and advisory services.</div>
+
+        <button onclick="toggleServiceInfo('service6')">TDS Services</button>
+        <div id="service6" class="service-info">Accurate TDS return processing and consultation.</div>
+
+        <button onclick="toggleServiceInfo('service7')">ITR Services</button>
+        <div id="service7" class="service-info">Comprehensive ITR filing services for individuals and businesses.</div>
+
+        <button onclick="toggleServiceInfo('service8')">Accounting Services</button>
+        <div id="service8" class="service-info">Complete accounting solutions tailored to your needs.</div>
+
+        <button onclick="toggleServiceInfo('service9')">Taxation Services</button>
+        <div id="service9" class="service-info">End-to-end taxation services for compliance and planning.</div>
+
+        <button onclick="toggleServiceInfo('service10')">Finalization</button>
+        <div id="service10" class="service-info">Meticulous financial finalization for accurate reporting.</div>
+
+        <button onclick="toggleServiceInfo('service4')">SIP</button>
+
+        <button onclick="toggleServiceInfo('service4')">Audit</button>
+        <div id="service4" class="service-info">Tax, Statuory, Physical, Internal Audit</div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p><strong>Name:</strong> Nishant Jha</p>
+        <p><strong>Phone:</strong> +91 9162592948</p>
+        <p><strong>Email:</strong> nishantjhanj19@gmail.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Nishant Jha. All rights reserved.</p>
+    </footer>
+</body>
+</html>
